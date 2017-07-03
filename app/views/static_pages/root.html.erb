@@ -22,7 +22,7 @@
 <div class="form-group">
   <div class="form-container col-md-6 input-group ">
 
-    <%= form_tag root_path, method: 'get' do %>
+    <%= form_tag root_path, method: 'get'  do %>
       <h1 id="search-label"><%= label_tag :name, 'Search Gems'%></h1><br>
 
       <div class="input-wrapper">
@@ -38,8 +38,8 @@
 
 
 
-<% @gems = Gems.search(params[:search]) %>
-  <% @gems.each do |g|%>
+
+
 <% if @gems.blank? %>
   <h4 class="no-results">Oh no! Looks like the <%= params[:search] %> Gem can't be found.</h4>
 <% end %>
@@ -47,11 +47,8 @@
 <div class="list-group">
   <ul class="found-gems">
     <!-- list search results here. -->
-
-      <li class="gem-results"><%= g %>
-
-
-      </li>
-<% end %>
+<% @gems.each do |gems| %>
+    <li class="gem-results"><%= gems %></li>
   </ul>
+<% end %>
 </div>
