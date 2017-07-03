@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Teachable Growth Team Developer Test
 
 Thank you for applying to Teachable! Your goal with this test is to build an interface that allows a user to search for ruby gems, and save their favorites.
@@ -19,3 +20,6 @@ Thank you for applying to Teachable! Your goal with this test is to build an int
 2. If you use a JavaScript framework, think about which one would be best for the task. Be prepared to defend your choice.
 
 3. For extra credit, make the pages responsive. There are no designs for this, it's up to you to decide how this should look. Bootstrap has been added to this rails project for you.
+=======
+# teachable_test
+>>>>>>> e1d43b12dbda310ff569d893f306bc87e8dddcb7
