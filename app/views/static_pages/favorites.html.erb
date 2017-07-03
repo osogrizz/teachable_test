@@ -1,1 +1,26 @@
-Please build the favorites page here.
+
+<div class="map-image col-md-4">
+  <div class="image-map-wrapper">
+
+      <%= image_tag "map.png" %>
+
+  </div>
+</div>
+
+<div class="spacer col-md-2">
+
+  <%= image_tag "teachable-logo.png", :class => "logo-tag" %>
+
+  <div class="spacer-inner-wrapper">
+    <%= link_to "Search", root_path, class: "button search-nav-btn" %>
+    <%= link_to "Favorites", favorites_path, class: "button fav-nav-btn" %>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <h1 class="fav-header">Favorites</h1>
+  <ul class="">
+    <!-- list all favorited gems here. -->
+
+  </ul>
+</div>

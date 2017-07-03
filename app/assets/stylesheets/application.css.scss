@@ -1,18 +1,100 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
  @import 'bootstrap-sprockets';
  @import 'bootstrap';
+
+body {
+  font-family: Lato, sans-serif;
+  letter-spacing: .15em;
+}
+h1 {
+  font-size: 30px;
+  margin-left: 30px;
+}
+.map-image {
+  margin-left: 0;
+  padding: 0;
+}
+.image-map-wrapper {
+}
+.logo-tag {
+  margin-top: 50px;
+  margin-left: -40px;
+}
+
+//  page navigation buttons
+.spacer {
+
+}
+.spacer-inner-wrapper {
+
+  margin-top: 350px;
+}
+.search-nav-btn {
+  display: flex;
+  padding: 8px;
+  margin-right: 0;
+  color: white;
+  text-decoration: none !important;
+}
+.search-nav-btn:hover {
+  color: skyblue;
+}
+
+.fav-nav-btn {
+  padding: 8px;
+  color: white;
+  text-decoration: none !important;
+}
+.fav-nav-btn:hover {
+  color: skyblue;
+}
+
+// search form elements
+.form-container {
+  padding-top: 20vh;
+}
+.input-field {
+  margin-right: 0;
+  padding: 5px;
+  max-width: 70%;
+  min-width: 40%;
+  border-radius: 30px 0px 0px 30px !important;
+  outline: none !important; //not working!!
+  text-indent: 10px;
+  border:black solid;
+  border-right: none;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 100;
+}
+.input-field:hover {
+  border-color: skyblue;
+}
+.input-field:hover  .search-btn{
+  border-color: skyblue;
+}
+.search-btn {
+  outline: none !important;
+  margin-left: 0;
+  outline-style: none;
+  background-color: white;
+  border-radius: 0px 30px 30px 0px;
+  border-top: solid black;
+  border-right: solid black;
+  border-bottom: solid black;
+  border-left: none;
+  height: 50px;
+}
+.search-btn:hover {
+  background-color: inherit;
+  border-color: skyblue;
+  border-left: none;
+}
+.search-btn:focus {
+  background-color: white;
+}
+.no-results {
+  color: red;
+}
+.fav-header {
+  margin-top: 100px;
+}

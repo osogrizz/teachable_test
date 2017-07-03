@@ -1,1 +1,52 @@
-Please build the search page here.
+<%= stylesheet_link_tag 'application',
+'https://fonts.googleapis.com/css?family=Lato',
+ media: 'all', 'data-turbolinks-track' => true %>
+
+<div class="map-image col-md-4">
+  <div class="image-map-wrapper">
+
+      <%= image_tag "map.png" %>
+
+  </div>
+</div>
+
+<div class="spacer col-md-2">
+  <%= image_tag "teachable-logo.png", :class => "logo-tag" %>
+  <div class="spacer-inner-wrapper">
+    <%= link_to "Search", root_path, class: "button search-nav-btn" %>
+    <%= link_to "Favorites", favorites_path, class: "button fav-nav-btn" %>
+  </div>
+
+</div>
+
+<div class="form-group">
+  <div class="form-container col-md-6 input-group ">
+
+    <%= form_tag root_path, method: 'get' do %>
+      <h1 id="search-label"><%= label_tag :name, 'Search Gems'%></h1><br>
+
+      <div class="input-wrapper">
+        <%= text_field_tag :search, params[:search], placholder: "Gem Search", :class => "form-control input-field"%>
+          <%= button_tag(type: "submit", class: "btn btn-default search-btn") do %>
+            <%= image_tag "magnifying-glass.png" %>
+          <% end %>
+      </div>
+
+  </div>
+</div>
+<% end %>
+
+
+
+
+
+<% if @gems.blank? %>
+  <h4 class="no-results">Oh no! Looks like the <%= params[:search] %> Gem can't be found.</h4>
+<% end %>
+
+<div class="list-group">
+  <ul class="found-gems">
+    <!-- list search results here. -->
+
+  </ul>
+</div>
